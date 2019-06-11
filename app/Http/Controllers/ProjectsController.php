@@ -13,6 +13,10 @@ class ProjectsController extends Controller
        
     }
 
+    public function create(){
+        return view('projects.create');
+    }
+
     public function store(){
         //validate
        $attributes = request()->validate([
@@ -21,11 +25,11 @@ class ProjectsController extends Controller
            ]);
 
         //  $attributes['owner_id'] = auth()->id();
-         auth()->user()->projects()->create($attributes);
+        $project =  auth()->user()->projects()->create($attributes);
 
 
         // Project::create($attributes);
-        return redirect('/projects');
+        return redirect($project->path());
 
         return view('projects.index', compact('projects'));
     }

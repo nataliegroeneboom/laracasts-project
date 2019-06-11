@@ -17,3 +17,37 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+
+@mixin card{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.08);
+    padding: 15px;
+    height:200px;
+    margin-bottom: 10px;
+}
+@mixin button{
+    width: 132px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px 0 #b0eaff;
+    background-color: #47cdff;
+    color: #fff;
+}
+
+@mixin title{
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    margin-left: -15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #47cdff;
+}
+@mixin anchor{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}

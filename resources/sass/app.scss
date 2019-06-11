@@ -1,8 +1,147 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    background-color: #f5f6f9;
+}
+.bg-white{
+    background-color: #fff;
+}
+.nav-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+header{
+    padding: 20px 0;
+    h2{
+       
+        color: rgba(0,0,0,0.4);
+        font-size: 20px;
+    }
+     
+    }
+    .flex-header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-end;
+    }
+    .button{
+       @include button;
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+        a:hover{
+            text-decoration: none;
+            color: #fff;
+    }
+}
+
+.projects{
+    @media screen and (min-width: 768px){
+        display: flex;
+        align-items: center;
+    }
+    
+    
+}
+.projects-container{
+    @media screen and (min-width: 768px){
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    margin: 0 -10px;
+    a:hover{
+        text-decoration: none;
+    }
+
+}
+.flex-project{
+    @media screen and (min-width: 768px){
+        width: 33.3333%;
+    }
+    @media screen and (min-width: 769px) and (max-width:1100px){
+        width: 50%;
+    }
+    
+    padding: 0 10px;
+    padding-bottom: 20px;
+}
+.card{
+    @include card;
+
+    h3{
+       @include title;
+    }
+
+    .description{
+        color: rgba(0,0,0,0.4);
+    }
+    
+}
+h2{
+    color: rgba(0,0,0,0.4);
+    font-size: 18px;
+    margin-bottom: 7px; 
+    a{
+        color: rgba(0,0,0,0.4);
+        &:hover{
+            color: rgba(0,0,0,0.4);
+        }
+    }
+}
+.tasks-container{
+    @media (min-width: 768px){
+        display: flex;
+    } 
+    margin: 0 -20px;
+}
+.column-left{
+    @media(min-width: 768px){
+        width: 75%;
+    }
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.column-right{
+    @media(min-width: 768px){
+        width: 25%;
+    }
+    padding: 20px;
+}
+.tasks{
+    margin-bottom: 20px;
+}
+a{
+    @include anchor;
+}
+textarea{
+    width: 100%;
+    min-height: 300px;
+}
+
+.task-card{
+    height: inherit;
+}
+input{
+    border: none;
+    width: 100%;
+}
+.flex{
+    display:flex;
+    justify-content: space-between;
+}
+.grey{
+    color: rgba(0,0,0,0.4);
+}
+
