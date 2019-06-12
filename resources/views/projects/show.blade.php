@@ -47,6 +47,12 @@
                         </textarea>
                         <button type="submit" class="button">Save</button>
                     </form>
+
+                    @if($errors->any())  
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                @endif 
                     
                 </div>
             </div>
