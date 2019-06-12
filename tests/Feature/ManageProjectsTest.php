@@ -52,7 +52,8 @@ class ManageProjectsTest extends TestCase
       {
         $this->signIn();
         $project = ProjectFactory::create();
-        $this->actingAs($project->owner)->get($project->path())
+        $this->actingAs($project->owner)
+        ->get($project->path())
         ->assertSee($project->title)
         ->assertSee($project->description);
       }
@@ -112,7 +113,9 @@ class ManageProjectsTest extends TestCase
         $project = ProjectFactory::create();
         $this->actingAs($project->owner)
         ->patch($project->path(), [
-          'notes' => 'Changed'
+          'notes' => 'Changed',
+          'title' => 'changed',
+          'description' => 'changed'
         ]);
         $this->assertDatabaseHas('projects', ['notes' => 'Changed']);
       }

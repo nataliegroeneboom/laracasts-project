@@ -3,8 +3,8 @@
     @section('content')
     <header class="projects" >
     <div class="flex-header">
-        <h2><a href="/projects">My Projects</a> / {{$project->title}}</h2>
-        <button class='button'><a href="/projects/create">New Project</a></button> 
+    <h2><a href="/projects">My Projects</a> / {{$project->title}}</h2>
+        <button class='button'><a href="{{$project->path() . '/edit'}}">Edit Project</a></button> 
     </div>
     </header>
     <main>
