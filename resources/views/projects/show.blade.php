@@ -58,6 +58,8 @@
             </div>
             <div class="column-right">
                  @include('projects.card')
+
+                @include('projects.activity.card')
             </div>
         </div>    
     </main>

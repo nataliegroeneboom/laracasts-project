@@ -25,14 +25,20 @@ class Project extends Model
     }
 
     public function activity(){
-        return $this->hasMany(Activity::class);
+        return $this->hasMany(Activity::class)->latest();
     }
 
-    public function recordActivity( $type)
+    /**
+     * Record activity for a project
+     * 
+     * @param string $description
+     */
+    public function recordActivity($description)
     {
-        Activity::create([
-            'project_id' => $this->id,
-            'description' => $type
-        ]);
+        // project id is assigned automatically
+        $this->activity()->create(compact('description'));
+        
+ 
     }
+ 
 }

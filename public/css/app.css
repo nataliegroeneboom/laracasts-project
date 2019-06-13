@@ -10741,7 +10741,6 @@ header h2 {
   border-radius: 0.5rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   padding: 15px;
-  height: 200px;
   margin-bottom: 10px;
 }
 
@@ -10757,6 +10756,11 @@ header h2 {
 
 .card .description {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.card ul > li {
+  list-style: none;
+  font-size: 14px;
 }
 
 h2 {
@@ -10837,5 +10841,9 @@ input {
 
 .grey {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.card-fixed {
+  height: 200px;
 }
 

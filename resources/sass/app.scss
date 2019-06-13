@@ -87,6 +87,10 @@ header{
     .description{
         color: rgba(0,0,0,0.4);
     }
+    ul > li{
+        list-style: none;
+        font-size: 14px;
+    }
     
 }
 h2{
@@ -145,3 +149,6 @@ input{
     color: rgba(0,0,0,0.4);
 }
 
+.card-fixed{
+    height:200px;
+}
