@@ -1,1 +1,1 @@
-You created "{{$activity->subject->body}}" project
+You created project
